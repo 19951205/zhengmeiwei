@@ -1,0 +1,813 @@
+@CHARSET "UTF-8";
+/*面包屑导航*/
+.zmw-banner{
+	background: transparent;
+}
+.crumbs{
+	font-size: 16px;
+}
+.crumbs>div {
+	padding: 55px 0;
+	color: #2b2b2b;
+}
+.crumbs>div a{
+	color: #2b2b2b;
+}
+.crumbs>div span{
+	color: #de4212;
+}
+.zmw-base-line{
+	border-bottom: 2px solid #cdcdcd;
+}
+/*页面里的标题样式  s* */
+.xnc-base-top{
+	text-align: left;
+	color: #333333;
+	text-transform: capitalize;
+}
+.xnc-base-top p{
+    font-weight: 600;
+}
+.product-line {
+	height: 2px;
+	width: 150px;
+	background: #333333;
+}
+/*页面里的标题样式  n* */
+/*右侧的新闻列表*/
+.zmw-product-news-main{
+	background: #fff;
+}
+.zmw-product-news-main, .zmw-product-news-main a{
+	color: rgba(51,51,51,.6);
+}
+.zmw-product-news-main .news-main-top{
+	padding: 20px 20px 0;
+}
+.news-main-top .title{
+	padding-bottom: 16px;
+	cursor: pointer;
+}
+.news-main-top .title p{
+	line-height: 20px;
+	max-height: 46px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	font-size: 14px;
+	color: rgba(51,51,51,.6);
+}
+.news-main-top .title h4{
+	padding-bottom: 16px;
+	line-height: 30px;
+	height: 30px;
+	overflow: hidden;
+	font-size: 18px;
+	color: rgba(51,51,51,.6);
+}
+.news-main-list{
+	font-size: 14px;
+}
+.news-main-list li, .news-main-top .title{
+	border-bottom: 1px solid rgba(51,51,51,.2);
+}
+.news-main-list li:nth-last-child(1) {
+    border: 0 none;
+}
+.news-main-list li{
+	padding: 22px 0;
+}
+.news-main-list li a{
+    display: block;
+	max-height: 18px;
+	overflow: hidden;
+	font-size: 14px;
+}
+.news-main-list li a:hover,
+.news-main-list li, 
+.news-main-top .title:hover a,
+.news-main-top .title:hover,
+.news-main-top .title:hover h4,
+.news-main-top .title:hover p
+{
+	color: #de4212;
+}
+.zmw-product-tab{
+	
+}
+.zmw-product-tab a{
+	display: inline-block;
+	padding: 16px 36px;
+	border: 1px solid #333333;
+	color: #333333;
+	margin-left: 20px;
+}
+
+.zmw-product-tab li.active a{
+	background: #de4212;
+	border: 1px solid #de4212;
+	color: #fff;
+}
+.product-tab-item{
+	margin-top: -50px;
+}
+.product-tab-item .img{
+	height: 320px;
+	overflow: hidden;
+}
+.product-tab-item img{
+	min-height: 100%;
+}
+.product-tab-item > div{
+	margin-top: 50px;
+}
+.product-tab-item > div:nth-of-type(2n+1){
+	padding-right: 2%;
+}
+.product-tab-item > div:nth-of-type(2n+2){
+	padding-left: 2%;
+}
+/*舌尖上的蒸美味*/
+.product-main-title li{
+	padding: 0 1%;
+	margin-top: 20px;
+}
+.product-main-title li:nth-of-type(6n+1){
+	padding: 0;
+	padding-right: 2%;
+}
+.product-main-title li:nth-of-type(6n+6){
+	padding: 0;
+	padding-left: 2%;
+}
+.product-main-title li a{
+	padding: 8px 0;
+	display: block;
+	text-align: center;
+	color: #333;
+	border: 1px solid #333;
+}
+.product-main-title li.active a,
+.product-main-title li:hover a{
+	background: #de4212;
+	border-color: #de4212;
+	color: #fff;
+}
+.product-main-list .list-right{
+	padding: 4% 0 0 3.6%;
+}
+.product-main-list .list-right .line{
+	width: 80%;
+	height: 2px;
+	background: #333;
+	margin-top: 15px;
+}
+.list-right .list-right-main{
+	padding-left: 20px;
+}
+.list-right-main p{
+	opacity: .6;
+	margin-top: 40px;
+}
+.list-right-main ul img{
+	vertical-align: middle;
+}
+.list-right-main ul span{
+	vertical-align: middle;
+}
+.list-right-main ul li{
+	margin-top: 13px;
+}
+.product-main-list > li{
+	margin-top: 50px;
+	cursor: pointer;
+}
+.product-main-list > li:nth-of-type(2n) .list-left{
+	float: right;
+}
+.product-main-list > li:nth-of-type(2n) .list-right{
+	float: left;
+    padding: 4% 3.6% 0 0 ;
+}
+/*---------------------*/
+.nav-list-body{
+	position: relative;
+	z-index: 1;
+	background: #f4f4f4;
+}
+.dialog-main{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.5);
+	z-index: -22;
+	overflow: hidden;
+	opacity: 0;
+}
+.dialog-main .pad{
+	padding: 0 10%;
+}
+#dialog-main{
+    opacity: 0;
+    position: relative;
+}
+#dialog-main > div{
+	position: relative;
+	padding: 10% 20%;
+	overflow: hidden;
+    background-color: rgba(255,255,255,.7);
+}
+.dialog-pos{
+	padding: 3% 20%;
+	position: absolute!important;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+}
+#dialog-main-body{
+	position: absolute;
+	/*top: 0;
+	left: 0;*/
+	/*width: 100%;*/
+}
+/*.blur >div{
+	opacity: 0;
+}*/
+.xianzhi{
+	height: 300px;
+	width: 200px;
+	position: absolute;
+	overflow: hidden;
+	z-index: 0;
+	top: 0;
+	opacity: 0;
+}
+.blur{	
+    -webkit-filter:blur(10px);
+    -ms-filter:blur(10px);
+    filter:blur(10px);
+    background-color: rgba(255,255,255,.8);
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=10, MakeShadow=false); 
+}
+#dialog-main .img{
+	max-height: 550px;
+	overflow: hidden;
+}
+.introduce p{
+	margin-top: 0;
+	opacity: .8;
+	font-size: 14px;
+	line-height: 16px;
+	margin-top: 5px;
+}
+#dialog-main .list-right-main li{
+	margin-top: 0;
+}
+#dialog-main .list-right-main{
+	padding: 0;
+}
+.dialog-close{
+	text-align: center;
+	opacity: 0;
+}
+.dialog-close img{
+	cursor: pointer;
+	width: 4.5%;
+}
+/*蒸美味动态*/
+.news-tab-main .industry{
+	margin-top: 60px;
+}
+/*新闻的三级页面*/
+.detial-bbk-title h5{
+	color: #201c1d;
+}
+.detial-bbk-title ul{
+	margin: 15px 0;
+	font-family: Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+}
+.detial-bbk-title ul>li {
+    display: inline-block;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-right: 30px;
+    font-size: 14px;
+    color: #949494;
+}
+.detial-bbk-title ul>li:nth-of-type(1) {
+    background: url('../image/icon1.png') left center no-repeat;
+}
+.detial-bbk-title ul>li:nth-of-type(2) {
+    background: url('../image/icon2.png') left center no-repeat;
+}
+.detial-bbk-title ul>li:nth-of-type(3) {
+    padding-left: 25px;
+    background: url('../image/icon3.png') left center no-repeat;
+}
+.detial-bbk-prompt{
+	padding: 18px 20px;
+	font-size: 16px;
+	color: #949494;
+	letter-spacing: 2px;
+	background: #ededed;
+	border-left: 9px solid #de4212;
+	margin: 40px 0;
+}
+.detial-bbk-prompt p{
+	width: 6%;
+	color: #333333;
+}
+.detial-bbk-prompt span{
+	width: 94%;
+	line-height: 22px;
+	font-size: 14px;
+	max-height: 44px;
+    overflow: hidden;
+    display: block;
+}
+.detial-bbk-detial p{
+    color: #949494;
+    letter-spacing: 1px;
+    /*margin-top: 30px;*/
+    text-indent: 2rem;
+}
+.detial-bbk-detial p img{
+    margin-left: -2rem;
+    width: 70%!important;
+}
+.detial-bbk-detial div>img{
+	width: 70%!important;
+	height: auto!important;
+}
+.detial-bbk-detial div>img:nth-of-type(2n){
+	float: right
+}
+.detial-bbk-last{
+	color: #232323;
+	font-size: 14px;
+}
+.detial-bbk-last span{
+	color: #808080;
+	margin-right: 5px;
+}
+.detial-bbk-last b{
+	color: #333;
+}
+.detial-bbk-last a:hover b{
+	color: #de4212;
+}
+/*加盟动态*/
+.join-list{
+	margin-top: -60px;
+}
+.join-list li{
+	margin-top: 60px;
+}
+.join-list li:nth-of-type(2n+1){
+	padding: 0;
+	padding-right: 2%;
+}
+.join-list li:nth-of-type(2n+2){
+	padding: 0;
+	padding-left: 2%;
+}
+/*项目优势*/
+.advantage-left{
+	margin-top: -20px;
+}
+.advantage-left ul{
+	margin-bottom: 30px;
+}
+.advantage-left li{
+	margin-top: 20px;
+}
+.advantage-left li >div{
+	padding: 20px 5%;
+	color: #fff;
+	background: #de4212;
+}
+.advantage-left li:nth-of-type(2n+1){
+	padding-right: 1%;
+}
+.advantage-left li:nth-of-type(2n+2){
+	padding-left: 1%;
+}
+.advantage-left li .num{
+    margin-top: 4%;
+	width: 19.6%;
+	text-align: center;
+	vertical-align: middle;
+	border-right: 1px solid rgba(255,255,255,.6);
+}
+.advantage-left li .main{
+	width: 80.4%;
+	padding-left: 8%;
+}
+.tab-main-bottom li{
+	margin-top: 45px;
+}
+/*ditu*/
+.map{
+	width: 100%;
+	height: 550px;
+	overflow: hidden;
+}
+.store-main-list{
+	margin-top: 40px;
+}
+.store-main-list li{
+	float: left;
+	background: #de4212;
+	color: #fff;
+	width: 25%;
+	text-align: center;
+}
+.store-main-list li a{
+	display: block;
+	padding: 10px 0;
+	color: #fff;
+}
+.store-main-list li+li{
+	margin-left: 40px;
+}
+/*创业故事*/
+.story-list-left{
+	padding: 1rem 0;
+	border: 0 none;
+}
+.story-list li{
+	background: transparent;
+	padding-bottom: 1rem
+}
+/*分页*/
+.xmc-base-page .pagination-lg > li+li > a,
+.xmc-base-page .pagination > li+li > span,
+.xmc-base-page .pagination > li+li > .page-link
+{
+    margin-left: 18px;
+}
+.xmc-base-page .pagination-lg > li > a,
+.xmc-base-page .pagination > li > span,
+.xmc-base-page .pagination > li > .page-link
+{
+    border: 1px solid #1e0a09;
+    color: #1e0a09;
+    font-size: 14px;
+    border-radius: 0;
+    background: transparent;
+}
+.xmc-base-page .pagination > li > a:focus{
+	color: #1e0a09;
+}
+.xmc-base-page .pagination > li.next > a:hover, .xmc-base-page .pagination-lg > li.next > a.active{
+	border: 1px solid #de4212;
+    color: #1e0a09
+}
+.xmc-base-page .pagination > li.prev > a,
+.xmc-base-page .pagination > li:nth-of-type(1) > .page-link
+{
+	padding-left: 100px;
+	background: url(../image/left01.png) no-repeat 18px center;
+}
+.xmc-base-page .pagination > li.next > a,
+.xmc-base-page .pagination > li:nth-last-child(1) > .page-link
+{
+	padding-right: 100px;
+	background: url(../image/right01.png) no-repeat 65px center;
+}
+.pagination-lg > li > a, .pagination-lg > li > .page-link {
+    padding: 8px 8px;
+}
+.xmc-base-page .pagination > li > a:hover,
+.xmc-base-page .pagination-lg > li > a.active,
+.xmc-base-page .pagination > li.prev a:hover,
+.xmc-base-page .pagination > li.next a:hover,
+.xmc-base-page .pagination>li.active>span,
+.xmc-base-page .pagination > li > span:hover,
+.xmc-base-page .pagination > li > .page-link:hover,
+.xmc-base-page .pagination-lg > li > .page-link.active,
+.xmc-base-page .pagination > li.page-item:nth-of-type(1) .page-link:hover,
+.xmc-base-page .pagination > li.page-item:nth-last-child(1) .page-link:hover
+{
+	background-color: #de4212;
+	color: #fff;
+	border-color: #de4212;
+}
+.xmc-base-page .pagination > li.prev > a:hover,
+.xmc-base-page .pagination > li.prev > a.active,
+.xmc-base-page .pagination > li.prev > span:hover,
+.xmc-base-page .pagination > li.page-item:nth-of-type(1) > .page-link:hover,
+.xmc-base-page .pagination > li.page-item:nth-of-type(1) > .page-link.active
+{
+	background-image: url(../image/left02.png);
+}
+.xmc-base-page .pagination > li:nth-last-child(1) > .page-link:hover,
+.xmc-base-page .pagination > li:nth-last-child(1) > .page-link.active
+{
+	background-image: url(../image/right02.png);
+	
+}
+/*加盟专区	*/
+.franchise-tab-item .text{
+	position: relative;
+	color: #333333;
+	text-align: center;
+}
+.franchise-tab-item .text span{
+	display: inline-block;
+	position: absolute;
+	left: 50%;
+	top: -30px;
+	margin-left: -20%;
+	width: 40%;
+	padding: 10px 0;
+	background: #333333;
+	color: #fff;
+    /*min-height: 68px;*/
+}
+.franchise-tab-item .text .line45{
+	max-height: 44px;
+	overflow: hidden;
+}
+.product-tab-item > div{
+	cursor: pointer;
+}
+.product-tab-item > div:hover .text{
+	color: #de4212;
+}
+.product-tab-item > div:hover span{
+	background: #de4212;
+}
+.story-list-right{
+	padding-top: 2%;
+}
+@media (max-width: 1449px) and (min-width: 1200px){
+	/*舌尖上的蒸美味*/
+	.product-main-list .list-right{
+		padding: 1% 0 0 3.6%;;
+	}
+	/*加盟专区*/
+	.join-list {
+	    margin-top: -31px;
+	}
+	/*ditu*/
+	.map{
+		height: 440px;
+	}
+	.story-list-right{
+		padding-top: 1%;
+	}
+	.join-list-main .fs24{
+       font-size: 1rem;
+	}
+}
+@media (max-width: 1199px) and (min-width: 992px){
+	.fs14 { font-size: 0.6rem;}
+	.fs24{font-size: 1rem;}
+	.fs28{font-size: 22px;}
+	.mrgt30{margin-top: 1rem;}
+	/*舌尖上的蒸美味*/
+	.product-main-list .list-right{
+		padding: 4% 0 0 3.6%;;
+	}
+	.list-right-main p,.list-right-main ul li{
+		margin-top: 2px;
+	}
+	/*ditu*/
+	.map{
+		height: 400px;
+	}
+	/*加盟专区*/
+	.join-list {
+	    margin-top: -29px;
+	}
+	.product-tab-item .img{
+		height: 210px;
+	}
+	.story-list-right{
+		padding-top: 1rem;
+	}
+	.join-list-main .fs24{
+       font-size: 0.8rem;
+	}
+	.detial-bbk-detial div>img{
+		width: 100%!important;
+		height: auto!important;
+	}
+}
+@media (max-width: 991px) and (min-width: 768px){
+	.col-md-74,.col-md-43,.col-md-57{width: 100%;} 
+	.pdr60{padding: 0;}
+	/*分页*/
+    .xmc-base-page .pagination > li.prev a ,
+    .xmc-base-page .pagination > li:nth-of-type(1) .page-link {
+    	padding-left: 50px;
+	    background-position-x: 4px;
+	    background-size: 48px;
+    }
+    .xmc-base-page .pagination > li.next a,
+    .xmc-base-page .pagination > li:nth-last-child(1) .page-link{
+    	padding-right: 50px;
+	    background-position-x: 49px;
+	    background-size: 45px;
+    }
+    .xmc-base-page .pagination li a, .xmc-base-page .pagination span,
+     .xmc-base-page .pagination .page-link {
+	    padding: 4px 4px;
+	}
+	/*ddaoh 导航*/
+	.zmw-nav-right.fr,
+	.zmw-nav .ydm-logo{
+		float: left;
+	}
+	/*加盟*/
+	.join-list li:nth-of-type(2n+1),
+	.join-list li:nth-of-type(2n+2) {
+	    padding: 0;
+	}
+	.join-list-main p{
+		min-height: auto;
+	}
+	/*舌尖上的蒸美味*/
+	.list-right .list-right-main {
+	    padding-left: 0;
+	}
+	.product-main-list .list-right {
+	    padding: 4% 0;
+	}
+	.product-main-list > li:nth-of-type(2n) .list-right{
+		padding-top: 2%;
+	}
+	.list-right-main p {
+		margin-top: 0.3rem;
+	}
+	/*zong支持*/
+	.advantage-left li .num{
+		margin-top: 2%;
+	}
+	.advantage-left li:nth-of-type(2n+1),
+	.advantage-left li:nth-of-type(2n+2){
+	    padding:0
+	}
+	/*ditu*/
+	.map{
+		height: 425px;
+	}
+	/*关于我们*/
+	.product-tab-item > div:nth-of-type(2n+1), .product-tab-item > div:nth-of-type(2n+2) {
+	    padding: 0px;
+	}
+	.story-list-right{
+		padding-top: 1rem;
+	}
+	.detial-bbk-detial div>img{
+		width: 100%!important;
+		height: auto!important;
+	}
+}
+@media only screen and (max-width: 768px) {
+	.fs18 { font-size: 0.7rem;}
+	.fs28 {font-size: 0.8rem;}
+	.col-md-74,.col-md-43,.col-md-57{width: 100%;}
+	.pdr60{padding: 0;}
+	.pdt60{padding-top: 1.6rem;}
+	.mgt20{margin-top: .5rem;}
+	.mgt50 {margin-top: 0.5rem;}
+	/*关于我们*/
+	.product-line{
+		width: 2.7rem;
+	}
+	.zmw-product-tab a{
+		margin-left: .3rem;
+    	padding: 0.2rem 0.7rem;
+	}
+	/*团队风采*/
+	.product-tab-item > div:nth-of-type(2n+1),
+	.product-tab-item > div:nth-of-type(2n+2){
+		padding: 0;
+	}
+	.product-tab-item .img{
+		height: 10.6rem;
+		margin-top: 1rem;
+	}
+	.product-tab-item {
+	    margin-top: 0;
+	}
+	/*舌尖上的蒸美味*/
+	.list-right .list-right-main {
+	    padding-left: 0;
+	}
+	.product-main-list .list-right {
+	    padding: 4% 0;
+	}
+	.list-right-main p {
+		margin-top: 0.3rem;
+	}
+	.list-right-main ul li {
+	    margin-top: 0;
+	}
+	.product-main-list > li {
+		margin-top: 1rem;
+	}
+	.list-right-main ul li img{
+		width: .8rem;
+	}
+	.join-list-main p{
+		min-height: auto;
+	}
+	/*加盟专区*/
+	.product-tab-item > div{
+		margin-top: 1rem;
+	}
+	/*新闻3级*/
+	.detial-bbk-last {
+	    display: -webkit-flex;
+	    justify-content: space-around;
+	}
+	.xmc-base-page .pagination > li > a, .xmc-base-page .pagination > li > span, .detial-bbk-last > div {
+	    width: 13.7rem;
+	    height: 3.625rem;
+	    line-height: 3.38rem;
+	    font-size: 1.91rem;
+	    background-image: url(base.css)!important;
+	    text-align: center;
+	    padding: 0!important;
+	}
+	.detial-bbk-detial p {
+		margin-top: .6rem;
+	}
+	.detial-bbk-last span {
+		color: #333;
+	}
+	.detial-bbk-last > div {
+	    border: 1px solid #333;
+	    margin: 0;
+	}
+	/*加盟动态*/
+	.join-list li:nth-of-type(2n+1),
+	.join-list li:nth-of-type(2n+2){
+		padding: 0;
+	}
+	
+	.news-tab-main .industry {
+	    margin-top: 1rem;
+	}
+	/*zong支持*/
+	.advantage-left li .num{
+		margin-top: 6%;
+	}
+	.advantage-left li:nth-of-type(2n+1),
+	.advantage-left li:nth-of-type(2n+2){
+	    padding:0
+	}
+	.advantage-left li {
+	    margin-top: 0.5rem;
+	}
+	.tab-main-bottom li {
+	    margin-top: 1rem;
+	}
+	.advantage-left{
+		margin-top: 0;
+	}
+	
+	/*ditu*/
+	.map{
+		height: 10rem;
+	}
+	/*分页*/
+	.pagination li:not(.prev):not(.next) {
+	    display: none;
+	}
+	.pagination li.prev a,
+	.pagination li.next a {
+	   width: 48%;
+	   padding: 0;
+	   margin: 0;
+	}
+	.pagination{
+		display: flex;
+		display: -webkit-flex;
+		justify-content: space-around;
+	}
+	.xmc-base-page .pagination > li > a,
+	.xmc-base-page .pagination > li > span,
+	.detial-bbk-last > div {
+		width: 8rem;
+		height: 2rem;
+		line-height: 2rem;
+		font-size: 1rem;
+		background-image: url('')!important;
+		text-align: center;
+		padding: 0!important;
+	}
+	.detial-bbk-detial div>img{
+		width: 100%!important;
+		height: auto!important;
+	}
+}
